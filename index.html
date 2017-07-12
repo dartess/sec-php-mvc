@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>.SEC: основы веб-программирования</h1>
+		<h2>MVC</h2>
+	</header>
+
+	<section class="slide">
+		<h2>Что мы писали</h2>
+		<img src="pictures/961f08ca4d319d066b2810baa614568b.png" alt="" style="width:60%">
+		<div class="next" style="position:absolute;top:20vh;right:10vw;">Ужасно</div>
+		<div class="next" style="position:absolute;top:30vh;right:12vw;font-size:1.2em">Кошмарно</div>
+		<div class="next" style="position:absolute;top:40vh;right:5vw;font-size:1.4em;font-weight:bold">Не допустимо</div>
+	</section>
+
+	<section class="slide">
+		<h2>Почему?</h2>
+		<ul>
+			<li class="next">Плохо читается</li>
+			<li class="next">Код сильно связан</li>
+			<li class="next">Нельзя реиспользовать</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Что же делать?</h2>
+		<ul>
+			<li class="next">Использовать общепринятые практики</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>MVC</h2>
+		<h3 class="next" style="font-weight:bold">Model-View-Controller</h3>
+		<h3 class="next" style="font-weight:bold">Модель-Представление-Контроллер</h3>
+		<br>
+		<p class="next">Методология разделения кода на три независимые части: </p>
+		<ul>
+			<li class="next">данные приложения (модель)</li>
+			<li class="next">пользовательский интерфейс (представление)</li>
+			<li class="next">управляющая логика (контроллер)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Модель</h2>
+		<p>Предоставляет данные и реагирует на команды контроллера, изменяя свое состояние.</p>
+		<p>Модель предоставляет данные и методы работы с ними: запросы в базу данных, проверка на корректность. Модель не зависит от представления — не знает как данные визуализировать — и контроллера — не имеет точек взаимодействия с пользователем —, просто предоставляя доступ к данным и управлению ими.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Представление</h2>
+		<p>Отвечает за отображение данных модели пользователю, реагируя на изменения модели.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Контроллер</h2>
+		<p>Интерпретирует действия пользователя, оповещая модель о необходимости изменений.</p>
+		<p>Контроллер обеспечивает «связи» между пользователем и системой. Контролирует и направляет данные от пользователя к системе и наоборот. Использует модель и представление для реализации необходимого действия.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Разные части приложения могут меняться независимо, используя остальные компоненты без изменений.</h2>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+	<style>
+	.slide {
+		padding-top: 35px;
+	}
+	.caption h2 {
+		padding-bottom: .15em;
+		font: 700 0.8em/1 PT Sans Narrow, sans-serif;
+	}
+	img {
+		max-width: 100%;
+	}
+	.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clear-list li::before {
+	content: none !important;
+}
+.clear-list li {
+text-indent: 0 !important;
+}
+	</style>
+
+	<script>
+		(function(){for(var e=document.getElementsByClassName("ciu_embed"),t=0;t<e.length;t++){var s=e[t],n=s.getAttribute("data-feature"),r=s.getAttribute("data-periods");if(n){var a="http://caniuse.bitsofco.de/embed/index.html",o='<iframe src="'+a+"?feat="+n+"&periods="+r+'" frameborder="0" width="100%" height="400px"></iframe>';s.innerHTML=o}else s.innerHTML="A feature was not included. Go to <a href='http://caniuse.bitsofco.de/#how-to-use'>http://caniuse.bitsofco.de/#how-to-use</a> to generate an embed."}var i=window.addEventListener?"addEventListener":"attachEvent";(0,window[i])("attachEvent"==i?"onmessage":"message",function(t){var s=t.data;if("string"==typeof s&&s.indexOf("ciu_embed")>-1)for(var n=s.split(":")[1],r=s.split(":")[2],a=0;a<e.length;a++){var o=e[a];if(o.getAttribute("data-feature")===n){var i=parseInt(r)+30;o.childNodes[0].height=i+"px";break}}},!1)}).call(this);
+	</script>
+</body>
+</html>
